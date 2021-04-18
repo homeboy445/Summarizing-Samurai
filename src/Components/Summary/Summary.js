@@ -45,13 +45,15 @@ const Summary = ({moveup}) => {
         toggleSet(!Settingflag);
         if(!Settingflag){
             gsap.to(ref4.current,{
-                scaleX:1,
+                width:"30%",
+                fontSize:"1.4rem",
                 delay:0.5,
                 duration:0.6
             });return;
         }
         gsap.to(ref4.current,{
-            scaleX:0,
+            width:"0%",
+            fontSize:"0rem",
             delay:0.5,
             duration:0.6
         });
