@@ -45,13 +45,13 @@ const Summary = ({moveup}) => {
         toggleSet(!Settingflag);
         if(!Settingflag){
             gsap.to(ref4.current,{
-                scale:1,
+                scaleX:1,
                 delay:0.5,
                 duration:0.6
             });return;
         }
         gsap.to(ref4.current,{
-            scale:0,
+            scaleX:0,
             delay:0.5,
             duration:0.6
         });
