@@ -57,7 +57,10 @@ const Summary = ({moveup}) => {
     }
 
     const HandleChange=(evt)=>{
-        if((DisplayContext==0&&evt.target.value.length>150)||
+        if(!evt.target.value){
+            ShiftPointer(0);
+        }
+        if((DisplayContext==0&&evt.target.value.length>60)||
             (DisplayContext==1&&evt.target.value.length>600)){
             if(evt.target.value.length>=TextAreaValue.length){
                 ToggleDisable(true);
@@ -99,7 +102,10 @@ const Summary = ({moveup}) => {
         if(!(DisplayContext==1||DisplayContext==0)){
             return ToggleDisplay("Select Some mode to proceed.")
         }
-        if((DisplayContext==0&&TextAreaValue.length>150)||
+        if(DisplayContext==1&&TextAreaValue.length<300){
+            return ToggleDisplay("The text is too short!");
+        }
+        if((DisplayContext==0&&TextAreaValue.length>60)||
         (DisplayContext==1&&TextAreaValue.length>600)){
             return ToggleDisplay("Reduce the text characters.");
         }
@@ -188,15 +194,20 @@ const Summary = ({moveup}) => {
                     <h1 style={{
                         background:DisplayContext==1?"black":"transparent",
                         color:DisplayContext==1?"white":"black"
-                    }}onClick={()=>ChangeDisplay(1)} >Summary</h1>
+                    }}onClick={()=>ChangeDisplay(1)} data-tip="Max. Limit is 600 & Min. Limit is 300 characters.">Summary</h1>
+                    <ReactTooltip/>
                     <h1 style={{
                         background:DisplayContext==0?"black":"transparent",
                         color:DisplayContext==0?"white":"black",
-                        textAlign:"center"
-                    }} onClick={()=>ChangeDisplay(0)}>Paraphrase</h1>
+                        textAlign:"center",
+                        cursor:"pointer",
+                        borderRadius:"4px",
+                        width:"43%"
+                    }} onClick={()=>ChangeDisplay(0)} data-tip="Max. Limit is 60 characters.">Paraphrase</h1>
+                    <ReactTooltip/>
                 </div>
                 <div className="textL-disp">
-                    {`${TextPointer}/${DisplayContext==0?150:600}`}
+                    {`${TextPointer}/${DisplayContext==0?60:600}`}
                 </div>
                 <div className="summary_2-1">
                     <textarea placeholder="Type or paste your text here."
@@ -211,14 +222,6 @@ const Summary = ({moveup}) => {
                             result.text.paraphrase
                            }</p>
                     </div>
-                    <img src={setting} alt=""
-                    className="settings"
-                    onClick={()=>{
-                        if(loading){
-                            return;
-                        }
-                        ToggleSettings();
-                    }}/>
                     <img src={CopyIcon} alt="" className="Copy"
                     onClick={()=>{
                         if(!result.status){
