@@ -274,12 +274,12 @@ const Summary = ({moveup}) => {
                 <div>
                     <input type="checkbox" defaultChecked={Settings.summarize}
                     onChange={()=>UpdateSettings({...Settings,summarize:!Settings.summarize})}/>
-                    <h2>Summarize[500 Chars]</h2>
+                    <h2>Summarize[600 Chars]</h2>
                 </div>
                 <div>
                     <input type="checkbox" defaultChecked={Settings.paraphrase}
                     onChange={()=>UpdateSettings({...Settings,paraphrase:!Settings.paraphrase})}/>
-                    <h2>Paraphrase[100 Chars]</h2>
+                    <h2>Paraphrase[150 Chars]</h2>
                 </div>
             </div>
             <div className="loaderbars" style={{visibility:loading?"visible":"hidden"}}>
