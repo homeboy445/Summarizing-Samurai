@@ -15,8 +15,9 @@
     display:flex;
     justify-content:center;
     align-items: center;
-    margin-left:5%;
+    flex-direction:row-reverse;
     margin-top:5%;
+    margin-left:-4%;
 }
 .Home_2
 {
@@ -90,7 +91,7 @@
 {
     position:absolute;
     transform:scale(0.5);
-    top:72%;
+    top:62.5%;
     right:27.8%;
 }
 .Home_3 > .txt_flx
@@ -107,8 +108,45 @@
 .Home_3 > .txt_flx > span
 {
     margin-top:3%;
+    transition:0.2s ease;
+    cursor: pointer;
     margin-bottom:3%;
     font-family: 'Dela Gothic One', cursive;
+}
+.Home_3 > .txt_flx > span:nth-child(1):hover
+{
+    color:yellow;
+    text-shadow:2px 2px 2px green;
+}
+.Home_3 > .txt_flx > span:nth-child(2):hover
+{
+    color:yellow;
+    text-shadow:2px 2px 2px green;
+}
+.Home_3 > .txt_flx > span:nth-child(3):hover
+{
+    color:yellow;
+    text-shadow:2px 2px 2px green;
+}
+.Home_3 > .txt_flx > span:nth-child(4):hover
+{
+    color:yellow;
+    text-shadow:2px 2px 2px green;
+}
+.Home_3 > .txt_flx > span:nth-child(5):hover
+{
+    color:yellow;
+    text-shadow:2px 2px 2px green;
+}
+.Home_3 > .txt_flx > span:nth-child(6):hover
+{
+    color:yellow;
+    text-shadow:2px 2px 2px green;
+}
+.Home_3 > .txt_flx > span:nth-child(7):hover
+{
+    color:yellow;
+    text-shadow:2px 2px 2px green;
 }
 .Home_3 > .Homehdr_2
 {
@@ -143,9 +181,9 @@
 }
 .Home_4
 {
-    margin-top:101%;
     display:flex;
     flex-direction:column;
+    margin-top:95%;
 }
 .Home_4  > h1
 {
@@ -217,14 +255,13 @@
 {
     margin-top:5%;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    justify-content: center;
     align-items:center;
 }
 .Home_5 > h1
 {
     position:absolute;
-    left:28%;
-    top:535%;
     color:black;
     font-size:6rem;
     transform: rotate(-5deg);
@@ -241,4 +278,83 @@
 .Home_5 > h1:hover
 {
     color:yellow;
+}
+@media only screen and (max-width: 1000px)
+{
+    .Home
+    {
+        overflow-y: hidden;
+    }
+    .Home_1 > img
+    {
+        width:60%;
+        height:60%;
+    }
+    .Home_1
+    {
+        margin-left:-15%;
+    }
+    .Home_2
+    {
+        margin-left:-15%;
+    }
+    .Home_2 > h1:nth-child(1)
+    {
+        font-size:1.5rem;
+    }
+    .Home_2 > h1:nth-child(2)
+    {
+        font-size:2.3rem;
+    }
+    .Home_2 > h1:nth-child(3)
+    {
+        font-size:2.3rem;
+    }
+    .Home_4
+    {
+        margin-top:10%;
+        display:flex;
+        flex-direction:column;
+    }
+    .Home_4  > h1
+    {
+        font-size:2rem;
+        text-align: center;
+        margin:5%;
+        margin-top:15%;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    .Home4bx1
+    {
+        margin-top:10%;
+        margin-bottom:10%;
+        border-left:4px solid black;
+    }
+    .Home4bx2
+    {
+        margin-top:10%;
+        margin-bottom:10%;
+        border-right:4px solid black;
+    }
+    .Home_4 > .Home4bx1 > h1
+    {
+        font-size:2rem;
+    }
+    .Home_4 > .Home4bx2 > h1
+    {
+        font-size:2rem;
+    }
+    .Home_5
+    {
+        margin-top:5%;
+    }
+    .Home_5 > img
+    {
+        width:70%;
+        height:70%;    
+    }
+    .Home_5 > h1
+    {
+        font-size:2rem;
+    }
 }

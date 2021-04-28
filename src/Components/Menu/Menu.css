@@ -68,3 +68,10 @@
 {
     transform:rotate(360deg);
 }
+@media only screen and (max-width: 1000px)
+{
+    .Menu > ul > li
+    {
+        font-size:2rem;
+    }   
+}

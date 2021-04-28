@@ -52,7 +52,7 @@ const Menu = ({flag,toggle,toggleScroll}) => {
                 ease:"power3"
             });
         }
-    },[])
+    },[ref1]);
     
     return (
         <div className="Menu">
