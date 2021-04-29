@@ -217,20 +217,23 @@
 {
     .summary_1
     {
-        margin-bottom:20%;
+        margin-top:20%;
+        margin-bottom:40%;
     }
     .summary_1 > h1:nth-child(2)
     {
         font-size:1.7rem;
+        text-align:left;
     }
     .summary_1 > h1:nth-child(3)
     {
         font-size:1rem;
+        text-align:right;
     }
     .summary_1 > img
     {
-        width:60%;
-        height:60%;
+        width:90%;
+        height:90%;
     }
     .summary_2
     {
@@ -254,10 +257,10 @@
     }
     .sm-cat
     {
-        width:100%;
+        width:90%;
         margin-bottom:10%;
         border:2px solid black;
-        margin-right:6%;
+        margin-right:2%;
     }
     .sm-cat > h1:nth-child(1)
     {
@@ -287,7 +290,7 @@
         position:absolute;
         width: 10%;
         height:10%;
-        bottom:-62%;
+        bottom:-94%;
         right:5%;
     }
 }
