@@ -18,7 +18,7 @@
 <br/>
 <p><a href="https://summarizing-samurai.netlify.app/"> View Demo </a></p>
 <br/>
-<h2>Some Screen-Shots of our site</h2>
+<h2>Some Screen-Shots of the site</h2>
 <p align="center">
   <img src="https://github.com/ujjawal-shrivastava/summarizer/blob/main/src/ScreenShots/ss1.png" width="350" title="hover text">
   <img src="https://github.com/ujjawal-shrivastava/summarizer/blob/main/src/ScreenShots/ss2.png" width="350" alt="accessibility text">
